@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _1009
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            String name;
+            double fixedsalary, bonussalary,seller;
+            name = Console.ReadLine();
+            fixedsalary = Convert.ToDouble(Console.ReadLine());
+            seller = Convert.ToDouble(Console.ReadLine());
+            bonussalary = (seller * 15) / 100;
+            Console.WriteLine("TOTAL = R$ {0}", (fixedsalary + bonussalary).ToString("0.00"));
+            Console.ReadKey();
+
+        }
+    }
+}
