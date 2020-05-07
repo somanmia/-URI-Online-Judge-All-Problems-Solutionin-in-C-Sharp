@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _1180
+{
+    class URI
+    {
+        static void Main(string[] args)
+        {
+            int i, j, n,pos,min;
+            n = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[n];
+            string line1 = Console.ReadLine();
+            String[] value = line1.Split(' ');
+            for (i = 0; i < array.Length; i++) {
+                array[i] = Convert.ToInt32(value[i]);
+                
+            }
+            min = array[0];
+            pos = 0;
+            for (j = 1; j < array.Length; j++) {
+                if (array[j] < min)
+                {
+                    min = array[j];
+                    pos = j;
+                }
+            }
+            Console.WriteLine("Menor valor: {0}", min);
+            Console.WriteLine("Posicao: {0}", pos);
+            Console.ReadKey();
+        }
+    }
+}
