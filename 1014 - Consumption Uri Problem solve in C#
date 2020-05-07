@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _1014
+{
+    class URI
+    {
+        static void Main(string[] args)
+        {
+            int x;
+            double y,result;
+            x = Convert.ToInt32(Console.ReadLine());
+            y = Convert.ToDouble(Console.ReadLine());
+            result = x / y;
+            Console.WriteLine("{0} km/l", result.ToString("0.000"));
+            Console.ReadKey();
+        }
+    }
+}
