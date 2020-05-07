@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _1177_uri_probelm
+{
+    class URI
+    {
+        static void Main(string[] args)
+        {
+            int i, T, ck; 
+            int[] array = new int[1000];
+            T = Convert.ToInt32(Console.ReadLine());
+            ck = 0;
+            for (i = 0; i < array.Length; i++) {
+                Console.WriteLine("N[{0}] = {1}", i, ck);
+                ck++;
+                if (ck == T) {
+                    ck = 0;
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
