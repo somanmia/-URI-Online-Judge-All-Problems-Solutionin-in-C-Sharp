@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _1011
+{
+    class URI
+    {
+        static void Main(string[] args)
+        {
+            double r,result;
+            double pi = 3.14159;
+            r = Convert.ToDouble(Console.ReadLine());
+            result=(4/3.0)*pi * r * r *r;
+            Console.WriteLine("VOLUME = {0}", result.ToString("0.000"));
+            Console.ReadKey();
+        }
+    }
+}
