@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _1010
+{
+    class URI
+    {
+        static void Main(string[] args)
+        {
+            int a, b,a2,b2;
+            double re, sum, c,c2;
+            String line1 = Console.ReadLine();
+            string line2 = Console.ReadLine();
+
+            String[] fline = line1.Split(' ');
+            String[] lline = line2.Split(' ');
+
+            a = Convert.ToInt32(fline[0]);
+            b = Convert.ToInt32(fline[1]);
+            c = Convert.ToDouble(fline[2]);
+            re = b * c;
+
+
+            a2 = Convert.ToInt32(lline[0]);
+            b2 = Convert.ToInt32(lline[1]);
+            c2 = Convert.ToDouble(lline[2]);
+
+            sum = re + (b2 * c2);
+
+            Console.WriteLine("VALOR A PAGAR: R$ {0}", sum.ToString("0.00"));
+            Console.ReadKey();
+
+
+
+
+        }
+    }
+}
