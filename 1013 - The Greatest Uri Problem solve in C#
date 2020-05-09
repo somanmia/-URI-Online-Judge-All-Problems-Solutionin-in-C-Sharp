@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _1013
+{
+    class URI
+    {
+        static void Main(string[] args)
+        {
+            int a, b, c,max;
+            String str = Console.ReadLine();
+            String [] value = str.Split(' ');
+
+            a = Convert.ToInt32(value[0]);
+            b = Convert.ToInt32(value[1]);
+            c = Convert.ToInt32(value[2]);
+            
+            if(b>a && b > c)
+            {
+                max = b;
+            }else if(c>a && c > b)
+            {
+                max = c;
+            }
+            else
+            {
+                max = a;
+            }
+            Console.WriteLine("{0} eh o maior", max);
+            Console.ReadKey();
+
+        }
+    }
+}
