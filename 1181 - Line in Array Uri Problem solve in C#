@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _1013
+{
+    class URI
+    {
+        static void Main(string[] args)
+        {
+            int row, col, n;
+            String x;
+            double avg, sum;
+            double [,] N = new double[12,12]; 
+            n = Convert.ToInt32(Console.ReadLine());
+            x = Console.ReadLine();
+            for (row = 0; row < 12; row++)
+            {
+                for (col = 0; col < 12; col++)
+                {
+                    N[row,col]= Convert.ToDouble(Console.ReadLine());
+                }
+            }
+            sum = 0.0;
+            for (col = 0; col < 12; col++)
+            {
+                sum = sum + N[n, col];
+            }
+
+            if (x.Equals("S"))
+            {
+                Console.WriteLine("{0}", sum.ToString("0.0"));
+            }else if (x.Equals("M"))
+            {
+                avg = sum / 12.0;
+                Console.WriteLine("{0}", avg.ToString("0.0"));
+
+            }
+            Console.ReadKey();
+
+        }
+    }
+}
