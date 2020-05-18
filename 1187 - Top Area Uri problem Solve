@@ -1,0 +1,42 @@
+using System;
+namespace _1187
+{
+    class URI
+    {
+        static void Main(string[] args)
+        {
+            int row, col, px = 1, py = 10;
+            double[,] N = new double[12,12];
+            double sum, avg;
+            String x = Console.ReadLine();
+            for (row = 0; row < 12; row++)
+            {
+                for (col = 0; col < 12; col++)
+                {
+                    N[row, col] = Convert.ToDouble(Console.ReadLine());
+                }
+            }
+            sum = 0.0;
+            for (row = 0; row <= 4; row++)
+            {
+                for(col= px;col<= py; col++)
+                {
+                    sum = sum + N[row, col];
+                }
+                px++;
+                py--;
+            }
+
+            if (x.Equals("S"))
+            {
+                Console.WriteLine("{0}", sum.ToString("0.0"));
+            }
+          else  if (x.Equals("M"))
+            {
+                avg = sum / 30.0;
+                Console.WriteLine("{0}", avg.ToString("0.0"));
+            }
+            Console.ReadKey();
+        }
+    }
+}
