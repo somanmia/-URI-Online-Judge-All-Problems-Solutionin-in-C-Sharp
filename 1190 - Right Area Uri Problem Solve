@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _1190
+{
+    class URI
+    {
+        static void Main(string[] args)
+        {
+            int row, col, px = 11, py = 7;
+            double [,]N = new double[12, 12];
+            double sum = 0, avg;
+            String x = Console.ReadLine();
+            for (row = 0; row < 11; row++)
+            {
+                for (col = 0; col < 12; col++)
+                {
+                    N[row, col] = Convert.ToDouble(Console.ReadLine());
+                }
+            }
+
+            for (row = 1; row <= 5; row++)
+            {
+                for(col= px; col <= 11; col++)
+                {
+                    sum = sum + N[row, col];
+                }
+                px--;
+            }
+
+            for (row = 6; row <= 10; row++)
+            {
+                for(col= py; col <= 11; col++)
+                {
+                    sum = sum + N[row, col];
+                }
+                py++;
+            }
+
+            if (x.Equals("S"))
+            {
+                Console.WriteLine("{0}", sum.ToString("0.0"));
+            }else if (x.Equals("M"))
+            {
+                avg = sum / 30.0;  
+                Console.WriteLine("{0}", avg.ToString("0.0"));
+            }
+            Console.ReadKey();
+        }
+    }
+}
