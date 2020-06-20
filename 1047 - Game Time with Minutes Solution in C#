@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _1047
+{
+    class URI
+    {
+        static void Main(string[] args)
+        {
+            int start_hour, start_munit, end_hour, end_munit,duration;
+            String x = Console.ReadLine();
+            String [] str = x.Split(' ');
+            start_hour = Convert.ToInt32(str[0]);
+            start_munit = Convert.ToInt32(str[1]);
+            end_hour = Convert.ToInt32(str[2]);
+            end_munit = Convert.ToInt32(str[3]);
+            duration =(end_hour*60+end_munit)- (start_hour * 60 + start_munit);
+            if (duration <= 0)
+            {
+                duration += (24 * 60);
+                
+            }
+            Console.WriteLine("O JOGO DUROU {0} HORA(S) E {1} MINUTO(S)", duration / 60, duration % 60);
+            Console.ReadKey();
+
+        }
+    }
+}
