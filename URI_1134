@@ -1,0 +1,37 @@
+using System;
+namespace _1134
+{
+    class URI
+    {
+        static void Main(string[] args)
+        {
+            int n, a = 0, g = 0, d = 0;
+            for (;;)
+            {
+                n = Convert.ToInt32(Console.ReadLine());
+                if (n == 4)
+                {
+                    break;
+                }
+                else
+                {
+                    if (n == 1)
+                    {
+                        a++;
+                    }else if (n == 2)
+                    {
+                        g++;
+                    }else if (n == 3)
+                    {
+                        d++;
+                    }
+                }
+            }
+            Console.WriteLine("MUITO OBRIGADO");
+            Console.WriteLine("Alcool: {0}", a);
+            Console.WriteLine("Gasolina: {0}", g);
+            Console.WriteLine("Diesel: {0}", d);
+            Console.ReadKey();
+        }
+    }
+}
