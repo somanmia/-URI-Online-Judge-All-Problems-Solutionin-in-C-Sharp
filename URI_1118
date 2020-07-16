@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _1118
+{
+    class URI
+    {
+        static void Main(string[] args)
+        {
+            double avg, sum, a;
+            int x, ck;
+            while (true)
+            {
+                sum = 0;
+                ck = 0;
+                while (true)
+                {
+                    if (ck == 2)
+                    {
+                        break;
+                    }
+                    a = Convert.ToDouble(Console.ReadLine());
+                    if(a>=0 && a <= 10)
+                    {
+                        ck++;
+                        sum = sum + a;
+                    }
+                    else
+                    {
+                        Console.WriteLine("nota invalida");
+
+                    }
+                }
+                avg = sum / 2.0;
+                Console.WriteLine("media = {0}", avg.ToString("0.00"));
+                Console.WriteLine("novo calculo (1-sim 2-nao)");
+
+                while (true)
+                {
+                    x = Convert.ToInt32(Console.ReadLine());
+                    if(x!=1 && x != 2)
+                    {
+                        Console.WriteLine("novo calculo (1-sim 2-nao)");
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                if (x == 2)
+                {
+                    break;
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
