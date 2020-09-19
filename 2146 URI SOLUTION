@@ -1,0 +1,20 @@
+using System;
+namespace _2146
+{
+    class URI
+    {
+        static void Main(string[] args)
+        {
+            String x;
+            int Y;
+            while((x=Console.ReadLine())!= null)
+            {
+                Y = Convert.ToInt32(x);
+                Y--;
+                Console.WriteLine(Y);
+
+            }
+            Console.ReadKey();
+        }
+    }
+}
