@@ -1,0 +1,30 @@
+using System;
+namespace _2747
+{
+    class URI
+    {
+        static void Main(string[] args)
+        {
+            int row, col;
+            for (row = 0; row < 7; row++)
+            {
+                for (col = 0; col < 39; col++)
+                {
+                    if (row == 0 || row == 6)
+                    {
+                        Console.Write("-");
+                    } else if (col == 0 || col == 38)
+                    {
+                        Console.Write("|");
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+                }
+                Console.Write("\n");
+            }
+            Console.ReadKey();
+        }
+    }
+}

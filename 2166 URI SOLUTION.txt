@@ -1,0 +1,21 @@
+using System;
+namespace _2161
+{
+    class URI
+    {
+        static void Main(string[] args)
+        {
+            int N;double ans = 0.0;
+            N = Convert.ToInt32(Console.ReadLine());
+            while (N!=0)
+            {
+                ans += 2.0;
+                ans = 1.0 / ans;
+                N--;
+            }
+            ans += 1.0;
+            Console.WriteLine(ans.ToString("0.0000000000"));
+            Console.ReadKey();
+        }
+    }
+}
