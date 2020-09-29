@@ -1,0 +1,107 @@
+using System;
+
+namespace _2748_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+                int row, col;
+                for (row = 0; row < 7; row++)
+                {
+                    for (col = 0; col < 39; col++)
+                    {
+                        if (row == 0)
+                        {
+                            Console.Write("-");
+                        }
+                        else if (row == 6)
+                        {
+                            Console.Write("-");
+                        }
+                        else if (col == 0)
+                        {
+                            Console.Write("|");
+                        }
+                        //-row------------1=====//
+                        else if (row == 1)
+                        {
+                            if ((col >= 1 && col <= 8) || (col >= 16 && col <= 37))
+                            {
+                                Console.Write(" ");
+                            }
+                            else if (col == 9)
+                            {
+                                Console.Write("Roberto");
+                            }
+
+                            else if (col == 38)
+                            {
+                                Console.Write("|");
+                            }
+
+                        }
+
+                        // row-------3=======//
+                        else if (row == 3)
+                        {
+                            if ((col >= 1 && col <= 8) || (col >= 13 && col <= 37))
+                            {
+                                Console.Write(" ");
+                            }
+                            else if (col == 9)
+                            {
+                                Console.Write("5786");
+                            }
+
+                            else if (col == 38)
+                            {
+                                Console.Write("|");
+                            }
+                        }
+
+                        //row ---- 5---===//
+
+                        else if (row == 5)
+                        {
+                            if ((col >= 1 && col <= 8) || (col >= 15 && col <= 37))
+                            {
+                                Console.Write(" ");
+                            }
+                            else if (col == 9)
+                            {
+                                Console.Write("UNIFEI");
+                            }
+
+                            else if (col == 38)
+                            {
+                                Console.Write("|");
+                            }
+                        }
+
+
+                        else if (col == 38)
+                        {
+                            Console.Write("|");
+                        }
+                        else
+                        {
+                            Console.Write(" ");
+
+                        }
+                    }
+                    Console.Write("\n");
+                }
+                Console.ReadKey();
+            }
+
+        }
+
+
+
+
+
+    }
+
+

@@ -1,0 +1,100 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _2749
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+          
+                int row, col;
+                for (row = 0; row < 7; row++)
+                {
+                    for (col = 0; col < 39; col++)
+                    {
+                        if (row == 0 || row == 6)
+                        {
+                            Console.Write("-");
+                        }
+
+                        else if (col == 0)
+                        {
+                        Console.Write("|");
+
+                        }
+                        //1 row-----//
+                        else if (row == 1)
+                        {
+
+                            if (col == 1)
+                            {
+                            Console.Write("x = 35");
+                            }
+                            else if (col >= 7 && col <= 37)
+                            {
+                            Console.Write(" ");
+                            }
+                            else if (col == 38)
+                            {
+                            Console.Write("|");
+                            }
+                        }
+                        //-- row=2,4---//
+                        else if (row == 2 || row == 4)
+                        {
+                            if (col == 38)
+                            {
+                            Console.Write("|");
+                            }
+                            else
+                            {
+                            Console.Write(" ");
+                            }
+                        }
+
+                        //--- row-----3--//
+                        if (row == 3)
+                        {
+                            if ((col >= 1 && col <= 15) || (col >= 22 && col <= 37))
+                            {
+                            Console.Write(" ");
+                            }
+                            else if (col == 16)
+                            {
+                            Console.Write("x = 35");
+                            }
+                            else if (col == 38)
+                            {
+                            Console.Write("|");
+                            }
+                        }
+
+                        if (row == 5)
+                        {
+                            if (col >= 1 && col <= 31)
+                            {
+                            Console.Write(" ");
+                            }
+                            else if (col == 32)
+                            {
+                            Console.Write("x = 35");
+                            }
+                            else if (col == 38)
+                            {
+                            Console.Write("|");
+                            }
+                        }
+                    }
+                   Console.Write("\n");
+                }
+            Console.ReadKey();
+            }
+
+
+        }
+    }
+    
